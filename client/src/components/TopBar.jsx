@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-import Data from '../Data.jsx';
 
-class App extends React.Component {
+class TopBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      data: Data
+      data: this.props.dummyData
     };
   }
   render() {
     return (
       <div>
-        <TopBar name={this.state.data.talkingTo} />
+        {`this.props.name`}
       </div>
     );
   }
 };
 
-export default App;
+export default TopBar;
