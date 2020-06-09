@@ -4,13 +4,13 @@ class TopBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      data: this.props.dummyData
+      talkingTo: this.props.talkingTo
     };
   }
   render() {
     return (
-      <div>
-        {`this.props.name`}
+      <div className='headline' >
+        {this.props.talkingTo }
       </div>
     );
   }
