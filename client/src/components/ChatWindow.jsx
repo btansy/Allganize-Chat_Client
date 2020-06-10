@@ -18,11 +18,20 @@ class ChatWindow extends React.Component {
     event.preventDefault();
   }
 
+  // componentDidMount() {
+  //   var helper = function() {
+  //     var newWidth = window.innerWidth - 24;
+  //     document.getElementById('textArea').style.width = newWidth;
+  //   }
+  //   helper();
+  //   window.addEventListener('resize', helper);
+  // }
+
   render() {
     return (
       <form className='inputText' onSubmit={this.handleSubmit}>
         <label>
-          <input className='textArea' type="text" value={this.state.value} onChange={this.handleChange} />
+          <input id='textArea' placeholder='Enter message' className='textArea' type="text" value={this.state.value} onChange={this.handleChange} />
         </label>
         <input className='sumbitButton' type="image" src= 'send.png' value="Submit" >
         </input>

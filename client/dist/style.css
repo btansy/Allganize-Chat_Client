@@ -3,11 +3,7 @@
 body {
   margin: 0px;
   background: #F8F8F8;
-}
-
-#app {
-  height: 100%;
-  width: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
 .app {
@@ -35,18 +31,25 @@ body {
   font-family: 'Roboto', sans-serif;
   position: fixed;
   z-index: 1;
-  bottom: 40px;
+  bottom: 0px;
   left: 0;
   height: 20px;
   letter-spacing: 0.2px;
   width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .sumbitButton {
-  float: right;
-  height: 100%;
+  /* float: right; */
+  /* height: 100%; */
+  /* width: 20px;
+  column-width: 20px; */
+  flex: 1 1 20px;
 }
 
 .textArea{
-  outline: none;
+  /* outline: none; */
+  /* border: white; */
+  flex: 1 1 auto;
 }
