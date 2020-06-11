@@ -58,6 +58,8 @@ html, body {
   text-align: right;
   background-color: white;
   box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+  color: #000000; 
+  opacity: 87%;
 }
 
 .notuser{
@@ -71,4 +73,13 @@ html, body {
   max-width: 400px;
   padding: 10px;
   margin: 10px;
+}
+
+.time {
+  color: #000000; 
+  opacity: 58%;
+  font-family: 'Roboto', sans-serif;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  font-size: 12px;
 }

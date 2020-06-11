@@ -45,7 +45,7 @@ class App extends React.Component {
     return (
       <div className='app'>
         <TopBar talkingTo={this.state.data.talkingTo} />
-        <Messages id='Messages' data={this.state.data} />
+        <Messages id='Messages' groupedMessages={this.state.groupedMessages} user={this.state.user} />
         <ChatWindow />
       </div>
     );
