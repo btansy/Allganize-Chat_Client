@@ -30,11 +30,8 @@ class ChatWindow extends React.Component {
   render() {
     return (
       <form className='inputText' onSubmit={this.handleSubmit}>
-        <label>
-          <input id='textArea' placeholder='Enter message' className='textArea' type="text" value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input className='sumbitButton' type="image" src= 'send.png' value="Submit" >
-        </input>
+        <input id='textArea' placeholder='Enter message' className='textArea' type="text" value={this.state.value} onChange={this.handleChange} />
+        <input className='sumbitButton' type="image" src= 'send.png' value="Submit" />
       </form>
     );
   }
