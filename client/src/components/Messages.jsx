@@ -12,16 +12,16 @@ class Messages extends React.Component {
   }
 
   helper(messages){
-    var group = [];
-    for (var i = 0; i < convo.length; i++){
-      if (groups[0] == undefined){
-        groups.push(messages); 
-      } else if (group)
-    }
-    return <MessageText key={message.text} timestamp= conversation={message} user={this.props.data.userName} />
-  }
+  //   var group = [];
+  //   for (var i = 0; i < convo.length; i++){
+  //     if (groups[0] == undefined){
+  //       groups.push(messages); 
+  //     } else if (group)
+  //   }
+  //   return <MessageText key={message.text} timestamp= conversation={message} user={this.props.data.userName} />
+  // }
     
-    // return <MessageText key={messages.id} conversation={messages} user={this.props.data.userName} />
+    return <MessageText key={messages.id} conversation={messages} user={this.props.data.userName} />
   }
 
   render() {

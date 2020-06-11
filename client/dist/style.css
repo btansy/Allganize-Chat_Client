@@ -57,6 +57,7 @@ html, body {
 .user {
   text-align: right;
   background-color: white;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
 .notuser{
@@ -67,4 +68,7 @@ html, body {
 
 .message { 
   border-radius: 5px;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px;
 }
