@@ -38,7 +38,7 @@ class App extends React.Component {
 
   componentDidMount(){
     var x = this.sortByTimestamp(this.state.data);
-    this.setState({groupedMessages: x}, ()=>{console.log(this.state.groupedMessages)});
+    this.setState({groupedMessages: x});
   }
 
   render() {

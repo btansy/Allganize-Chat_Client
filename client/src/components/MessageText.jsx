@@ -4,20 +4,24 @@ class MessageText extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      talkingTo: this.props.talkingTo
     };
+    this.fromUser = this.fromUser.bind(this);
   }
 
-  render() {
+  fromUser(){
     var from;
-    if (this.props.conversation.from === this.props.user) {
+    if (this.props.fromuser === true) {
       from = 'user';
     } else {
       from = 'notuser';
     }
+    return from;
+  }
+  
+  render() {
     return (
-      <div className={'message ' + from} >
-        {this.props.conversation.text}
+      <div >
+        <div className={'message ' + this.fromUser()} >{this.props.conversation.text}</div>
       </div>
     );
   }

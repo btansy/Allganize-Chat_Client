@@ -82,4 +82,30 @@ html, body {
   line-height: 16px;
   letter-spacing: 0.4px;
   font-size: 12px;
+  text-align: inherit;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.MessageGroup{
+  display: flex;
+}
+
+.MessageGroup.fromuser {
+  text-align: right;
+  flex-direction: row-reverse;
+  /* align-items: flex-end; */
+}
+.MessageGroup.notfromuser {
+  text-align: left;
+  flex-direction: row;
+  /* align-items: flex-start; */
+}
+
+.sideBar {
+  margin: 10px;
+}
+
+.body {
+
 }

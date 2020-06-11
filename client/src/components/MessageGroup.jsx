@@ -8,17 +8,14 @@ class MessageGroup extends React.Component {
     };
     this.textHelper = this.textHelper.bind(this);
     this.timeHelper = this.timeHelper.bind(this);
+    this.fromUser = this.fromUser.bind(this);
+    this.setClass = this.setClass.bind(this);
+    this.imageHelper = this.imageHelper.bind(this);
   }
 
   textHelper(message){
-    return <MessageText key={message.timestamp} conversation={message} user={this.props.user} />
+    return <MessageText key={message.timestamp} conversation={message} fromuser={this.fromUser()} />
   }
-
-  // iconHelper(from, user){
-  //   if (from === user) {
-  //     return <img src='' />
-  //   }
-  // }
 
   timeHelper(ms){
     var msgDate = new Date(ms);
@@ -41,11 +38,40 @@ class MessageGroup extends React.Component {
     }
   }
 
+  fromUser(){
+    if (this.props.user === this.props.conversation[0].from) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  setClass(){
+    if (this.fromUser() === true) {
+      return 'fromuser';
+    } else {
+      return 'notfromuser';
+    }
+  }
+
+  imageHelper() {
+    if (this.fromUser() === true) {
+      return 'profile.png';
+    } else {
+      return 'avatar.png';
+    }
+  }
+
   render() {
     return (
-      <div className='MessageGroup' >
-        {this.props.conversation.map(this.textHelper)}
-        <div className='time'>{this.timeHelper(this.props.conversation[this.props.conversation.length-1].timestamp)}</div>
+      <div className={'MessageGroup ' + this.setClass()}>
+        <div className='sideBar'>
+          <img src={this.imageHelper()} />
+        </div>
+        <div className='body'>
+          {this.props.conversation.map(this.textHelper)}
+          <div className='time'>{this.timeHelper(this.props.conversation[this.props.conversation.length-1].timestamp)}</div>
+        </div>
       </div>
     );
   }
